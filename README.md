@@ -1,5 +1,5 @@
 # ShishirM7.github.io
-# Valentine's Day website for Shivaghna and Ankita
+# Valentine's Day website for Shivankita
 
 <!DOCTYPE html>
 <html lang="en">
