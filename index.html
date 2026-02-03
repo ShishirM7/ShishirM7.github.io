@@ -246,17 +246,19 @@
   }
 
   function checkPassword() {
-    if (document.getElementById('password').value === correctPassword) {
-      document.getElementById('lock').classList.add('hidden');
-      revealSections();
-      startLiveCounter(); // keeps your live counter working
+    const input = document.getElementById('password').value;
+    if (input === correctPassword) {
+      document.getElementById('lock').classList.add('hidden'); // hide password section
+      revealSections();  // show the rest
+      startLiveCounter(); // start your live counter
 
-      // Start background music with sound
+      // Start background music now
       const bgMusic = document.getElementById('bgMusic');
-      bgMusic.src = bgMusic.src.replace("autoplay=0&mute=1", "autoplay=1&mute=0");
+      // reload the src to trigger autoplay with sound
+      bgMusic.src = bgMusic.src;  
     } 
     else {
-        alert('That date means everything to us 💔');
+      alert('That date means everything to us 💔');
     }
   }
 
