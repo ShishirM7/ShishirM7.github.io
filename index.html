@@ -318,7 +318,7 @@
   function unlockSite() {
     document.getElementById('lock').classList.remove('hidden');
     const bgMusic = document.getElementById('bgMusic');
-    bgMusic.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    bgMusic.src = bgMusic.src.replace("mute=1", "mute=0");
   }
 </script>
 
