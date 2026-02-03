@@ -99,23 +99,17 @@
   <h2>I'm Sorry 😔</h2>
   <p>I know I made mistakes. I hurt you, and I regret it deeply.</p>
   <p>You are my safe place, my love, my home. I promise to grow, to listen, and to be better.</p>
-  <p>This is my heart, just for you.</p> 
+  <p>This is me opening my heart, just for you.</p> 
   <button class="button" onclick="unlockSite()">Enter</button>
 </section>
 
 <section id="lock" class="card hidden">
   <h2>One small question 🔐</h2>
-  <p>Enter our special date (DDMMYYYY)</p>
-  <input id="password" placeholder="e.g. 14022023" />
+  <p>Enter our special date</p>
+  <input id="password" placeholder="DDMMYYYY" />
   <br><br>
   <button class="button" onclick="checkPassword()">Unlock ❤️</button>
 </section>
-
-<section id="letter" class="card hidden">
-  <h2>My Letter To You 💌</h2>
-  <p id="typed" class="typing"></p>
-</section>
-
 
 <section class="card hidden" id="reasons">
   <h2>Why I Love You 💖</h2>
@@ -150,14 +144,16 @@
   <button class="button" onclick="yesForgive()">Yes ❤️</button>
 </section>
 
-<button class="button" onclick="toggleDarkMode()">🌙 Toggle Night Mode</button>
-
 <footer>
   <p>Forever yours ❤️</p>
 </footer>
 
+<button class="button" onclick="toggleDarkMode()">🌙 Toggle Night Mode</button>
+
+
+
 <script>
-  const correctPassword = "14022023"; // CHANGE THIS
+  const correctPassword = "09091995"; // CHANGE THIS
 
   function unlockSite() {
     document.getElementById('lock').classList.remove('hidden');
@@ -170,20 +166,6 @@
     } else {
       alert('That date means everything to us 💔');
     }
-  }
-
-  const letterText = "My love, I am sorry. I love you more than I ever knew was possible. You are my heart, my peace, my forever.";
-  let i = 0;
-  function startTyping() {
-    document.getElementById('letter').classList.remove('hidden');
-    const interval = setInterval(() => {
-      document.getElementById('typed').innerText += letterText[i];
-      i++;
-      if (i >= letterText.length) {
-        clearInterval(interval);
-        revealSections();
-      }
-    }, 60);
   }
 
   function revealSections() {
